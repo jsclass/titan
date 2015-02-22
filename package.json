@@ -1,0 +1,51 @@
+{
+  "jspm": {
+    "directories": {
+      "baseURL": "/",
+      "lib": "/dist/lib",
+      "packages": "jspm_packages"
+    },
+    "configFile": "config.js",
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.3.13",
+      "lodash": "npm:lodash@^3.3.0",
+      "lumx": "github:lumapps/lumx@^0.3.12",
+      "ngComponent": "github:maseh87/ngComponent@master",
+      "ui-router": "npm:angular-ui-router@^0.2.13"
+    }
+  },
+  "devDependencies": {
+    "browser-sync": "^2.2.1",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-changed": "^1.1.1",
+    "gulp-concat": "^2.5.1",
+    "gulp-plumber": "^0.6.6",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-stylus": "^2.0.1",
+    "jspm": "^0.14.0",
+    "object.assign": "^1.1.1",
+    "require-dir": "^0.1.0",
+    "run-sequence": "^1.0.2",
+    "vinyl-paths": "^1.0.0"
+  },
+  "name": "titan",
+  "description": "Curriculum delivery",
+  "version": "1.0.0",
+  "main": "Gulpfile.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsclass/titan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsclass/titan/issues"
+  },
+  "homepage": "https://github.com/jsclass/titan"
+}
