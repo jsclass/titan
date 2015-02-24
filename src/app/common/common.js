@@ -1,10 +1,8 @@
 import angular from 'angular';
 import from 'ngComponent';
 import _ from 'lodash';
-
-let template = '<div>';
-template += '<h1>the color is {{ color }}</h1>';
-template += '</div>';
+import cardTemplate from 'app/common/card-template.html!text';
+import from '../../style.css!';
 
 export var CommonModule = angular.module('App.common', [
   'ngComponent'
@@ -14,23 +12,27 @@ export var CommonModule = angular.module('App.common', [
     constructor(config){
       super(config);
 
-      this.template = '<div class="card">';
-      this.template += '<h3>ima a card {{ name }}</h3>';
-      this.template += '</div>';
+      this.template = cardTemplate;
     }
   }
 
   return Card;
 })
 .directive('card', Card => {
-  let card = new Card();
+  let card = new Card({ replace: true });
 
-  card.on('click', () => {
+  card.on('click', (e, scope) => {
     console.log('clicked');
   })
   .ready(scope => {
-    scope.name = 'First card';
-  });
+    scope.title = 'First card';
+  })
+  .beforeReady( ()=> {
+    console.log('before ready');
+  })
+  .scopeOptions({
+    'numbers': 'two-way'
+  })
 
   return card;
 });

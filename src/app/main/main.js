@@ -1,8 +1,9 @@
 import angular from 'angular';
 
 class Main {
-  constructor(){
-    this.title = 'Yuuup';
+  constructor($mdSidenav){
+    this.isSideNavLockedOpen = true;
+    this.nums = [1,2,3,4,5,6,7,8,9,10,11];
   }
 
   setTitle(title){
@@ -17,7 +18,8 @@ export var MainModule = angular.module('App.main', [
     $stateProvider.state('app.main', {
       url: '/',
       templateUrl: 'app/main/main.html',
-      controller: 'MainController as Main'
+      controller: 'MainController as Main',
+      auth: true
     });
   })
   .controller('MainController', Main);

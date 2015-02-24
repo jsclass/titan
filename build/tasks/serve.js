@@ -6,6 +6,7 @@ var browserSync = require('browser-sync');
 // at http://localhost:9000
 gulp.task('serve', ['build'], function(done) {
   browserSync({
+    open: false,
     port: 9000,
     server: {
       baseDir: ['dist'],
