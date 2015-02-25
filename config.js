@@ -10,21 +10,25 @@ System.config({
 
 System.config({
   "map": {
-    "angular": "github:angular/bower-angular@1.3.13",
+    "angular": "github:angular/bower-angular@1.3.14",
     "angular-material": "github:angular/bower-material@0.8.0",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.3.14",
     "css": "github:systemjs/plugin-css@0.1.6",
     "lodash": "npm:lodash@3.3.0",
     "ngComponent": "github:maseh87/ngComponent@master",
     "text": "github:systemjs/plugin-text@0.0.2",
     "ui-router": "npm:angular-ui-router@0.2.13",
     "github:angular/bower-angular-animate@1.3.13": {
-      "angular": "github:angular/bower-angular@1.3.13"
+      "angular": "github:angular/bower-angular@1.3.14"
     },
     "github:angular/bower-angular-aria@1.3.13": {
-      "angular": "github:angular/bower-angular@1.3.13"
+      "angular": "github:angular/bower-angular@1.3.14"
+    },
+    "github:angular/bower-angular-mocks@1.3.14": {
+      "angular": "github:angular/bower-angular@1.3.14"
     },
     "github:angular/bower-material@0.8.0": {
-      "angular": "github:angular/bower-angular@1.3.13",
+      "angular": "github:angular/bower-angular@1.3.14",
       "angular-animate": "github:angular/bower-angular-animate@1.3.13",
       "angular-aria": "github:angular/bower-angular-aria@1.3.13",
       "css": "github:systemjs/plugin-css@0.1.6"
@@ -71,7 +75,7 @@ System.config({
       "util": "npm:util@0.10.3"
     },
     "github:maseh87/ngComponent@master": {
-      "angular": "github:angular/bower-angular@1.3.13"
+      "angular": "github:angular/bower-angular@1.3.14"
     },
     "github:systemjs/plugin-css@0.1.6": {
       "clean-css": "npm:clean-css@3.0.10",

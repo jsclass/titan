@@ -4,7 +4,7 @@ import _ from 'lodash';
 import cardTemplate from 'app/common/card-template.html!text';
 import from '../../style.css!';
 
-export var CommonModule = angular.module('App.common', [
+export var CommonModule = angular.module('app.common', [
   'ngComponent'
 ])
 .factory('Card', function(Component){

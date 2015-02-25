@@ -5,7 +5,7 @@ import {AuthModule} from 'app/auth/auth';
 import from 'ui-router';
 import from 'angular-material';
 
-angular.module('App', [
+angular.module('app', [
   'ui.router',
   'ngAnimate',
   'ngAria',
