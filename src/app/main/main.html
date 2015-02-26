@@ -1,4 +1,5 @@
 <div layout="column" layout-align="start start" layout-fill>
+  
   <md-toolbar>
     <div class="md-toolbar-tools">
       <span>Titan</span>
@@ -8,6 +9,7 @@
       </md-button>
     </div>
   </md-toolbar>
+  
   <md-content layout="row" flex>
     <md-sidenav class="md-sidenav-left md-whiteframe-z2"
       md-component-id="left" md-is-locked-open="Main.isSideNavLockedOpen">
@@ -15,14 +17,13 @@
         <h1 class="md-toolbar-tools">Menu</h1>
       </md-toolbar>
       <md-content>
-        <ul>
-          <li ng-repeat="num in Main.nums">{{ ::num }}</li>
-        </ul>
+        
       </md-content>
     </md-sidenav>
     
     <md-content>
-      safd
+      <ui-view />
     </md-content>
+    
   </md-content>
 </div>

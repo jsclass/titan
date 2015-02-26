@@ -37,7 +37,7 @@ export var AuthModule = angular.module('App.auth', [
       let win = openAuthWindow(mapsToUrls[provider]);
       let timer = $interval(() =>{
         if (win.closed) {
-          $state.go('app.main');
+          $state.go('app.main.dash');
           $interval.cancel(timer);
         }
       },500);

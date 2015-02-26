@@ -15,7 +15,7 @@ angular.module('app', [
   AuthModule.name
 ])
 .config(function($stateProvider, $urlRouterProvider, $mdThemingProvider){
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/dash');
 
   $stateProvider.state('app', {
     url: '',

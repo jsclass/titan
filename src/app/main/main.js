@@ -1,10 +1,11 @@
 import angular from 'angular';
+import from 'ui-router';
+import {DashModule} from 'app/main/dash/dash';
 
 class Main {
   constructor($mdSidenav, Gatekeeper){
     
     this.isSideNavLockedOpen = true;
-    this.nums = [1,2,3,4,5,6,7,8,9,10,11];
     
     this.logout = () => {
       Gatekeeper.logout();
@@ -17,7 +18,8 @@ class Main {
 }
 
 export var MainModule = angular.module('app.main', [
-
+  'ui.router',
+  DashModule.name
 ])
   .config(function($stateProvider) {
     $stateProvider.state('app.main', {
