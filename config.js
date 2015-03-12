@@ -16,6 +16,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.6",
     "lodash": "npm:lodash@3.3.0",
     "ngComponent": "github:maseh87/ngComponent@master",
+    "progress": "github:crisbeto/angular-svg-round-progressbar@0.2.4",
     "text": "github:systemjs/plugin-text@0.0.2",
     "ui-router": "npm:angular-ui-router@0.2.13",
     "github:angular/bower-angular-animate@1.3.13": {
@@ -32,6 +33,9 @@ System.config({
       "angular-animate": "github:angular/bower-angular-animate@1.3.13",
       "angular-aria": "github:angular/bower-angular-aria@1.3.13",
       "css": "github:systemjs/plugin-css@0.1.6"
+    },
+    "github:crisbeto/angular-svg-round-progressbar@0.2.4": {
+      "angular": "github:angular/bower-angular@1.3.14"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"

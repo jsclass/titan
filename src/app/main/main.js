@@ -1,6 +1,6 @@
 import angular from 'angular';
 import from 'ui-router';
-import {DashModule} from 'app/main/dash/dash';
+import {ProgressModule} from 'app/main/progress/progress';
 
 class Main {
   constructor($mdSidenav, Gatekeeper, $mdMedia){
@@ -29,7 +29,7 @@ class Main {
 
 export var MainModule = angular.module('app.main', [
   'ui.router',
-  DashModule.name
+  ProgressModule.name
 ])
   .config(function($stateProvider) {
     $stateProvider.state('app.main', {
@@ -41,4 +41,14 @@ export var MainModule = angular.module('app.main', [
       
     });
   })
-  .controller('MainController', Main);
+  .controller('MainController', Main)
+  .directive('loadCss', () =>{
+    return (scope, ele) =>{
+      let head = angular.element(document.querySelector('head'));
+      let link = document.querySelector('link[href="style.css"]');
+      
+      if (!link){
+        head.append('<link href="style.css" rel="stylesheet">');
+      }
+    };
+  });

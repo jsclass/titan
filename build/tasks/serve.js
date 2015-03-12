@@ -1,16 +1,20 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
-var nodemon = require('gulp-nodemon');
+// var nodemon = require('gulp-nodemon');
+var shell = require('shelljs');
 
 // this task utilizes the browsersync plugin
 // to create a dev server instance
 // at http://localhost:9000
-gulp.task('express', ['build'], function(){
-  return nodemon({
-    script: 'server.js'
-  }).on('start', function(){
-    // done();
-  });
+gulp.task('express', ['build'], function(done){
+  // return nodemon({
+  //   script: 'server.js',
+  //   ignore: ['./src/**/*.js', './src/**/*.html', './src/**/*.styl']
+  // }).on('start', function(){
+  //   // done();
+  // });
+  shell.exec('node server.js');
+  done();
 });
 
 gulp.task('serve', ['express'], function(done) {

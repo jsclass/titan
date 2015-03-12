@@ -32,7 +32,7 @@ export var CommonModule = angular.module('app.common', [
   })
   .scopeOptions({
     'numbers': 'two-way'
-  })
+  });
 
   return card;
 });

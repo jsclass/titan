@@ -15,7 +15,7 @@ angular.module('app', [
   AuthModule.name
 ])
 .config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $locationProvider){
-  $urlRouterProvider.otherwise('/dash');
+  $urlRouterProvider.otherwise('/progress');
 
   $stateProvider.state('app', {
     url: '',

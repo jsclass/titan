@@ -1,17 +1,22 @@
-<md-toolbar md-theme="{{ Main.theme.active }}">
+<md-toolbar md-theme="{{ Main.theme.active }}" load-css>
   <div class="md-toolbar-tools">
-    <md-button ng-click="Main.toggleSideNav()" hide-gt-sm>menu</md-button>
+    <md-button ng-click="Main.toggleSideNav()" hide-gt-md>menu</md-button>
     <span>Titan</span>
     <span flex></span>
     <md-button ng-click="Main.logout()">logout</md-button>
   </div>
 </md-toolbar>
 <div layout="row" layout-fill md-theme="{{ Main.theme.active }}" flex>
-  <md-sidenav class="md-sidenav-left md-whiteframe-z2"
-    md-component-id="left" md-is-locked-open="Main.$mdMedia('gt-sm')" layout="column">
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2" id="sidenav"
+    md-component-id="left" md-is-locked-open="Main.$mdMedia('gt-md')" layout="column">
     <md-toolbar class="md-accent md-tall"></md-toolbar>
     <md-content flex>
       <md-list>
+        <md-item>
+          <md-item-content layout-column layout-align="center center" layout-fill>
+            <md-button class="md-primary" flex="100" ui-sref="app.main.progress">Progress</md-button>
+          </md-item-content>
+        </md-item>
         <md-item>
           <md-item-content layout-column layout-align="center center" layout-fill>
             <md-button class="md-primary" flex="100">Courses</md-button>
@@ -31,6 +36,6 @@
     </md-content>
   </md-sidenav>
   
-  <md-content flex ui-view></md-content>
+  <md-content flex ui-view id="main"></md-content>
   
 </div>
