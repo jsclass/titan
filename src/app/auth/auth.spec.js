@@ -1,6 +1,6 @@
 import from 'angular';
 import from 'angular-mocks';
-import {AuthModule} from '../../../src/app/auth/auth';
+import {AuthModule} from 'app/auth/auth';
 
 describe('app.auth', () => {
   beforeEach(angular.mock.module(AuthModule.name));

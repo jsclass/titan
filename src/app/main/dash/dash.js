@@ -12,7 +12,7 @@ export var DashModule = angular.module('app.main.dash', [
 ])
   .config(function($stateProvider) {
     $stateProvider.state('app.main.dash', {
-      url: 'dash',
+      url: '/dash',
       template: dashTemplate,
       controller: 'DashController as Dash',
       auth: true

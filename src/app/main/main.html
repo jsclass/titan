@@ -1,29 +1,36 @@
-<div layout="column" layout-align="start start" layout-fill>
-  
-  <md-toolbar>
-    <div class="md-toolbar-tools">
-      <span>Titan</span>
-      <span flex></span>
-      <md-button ng-click="Main.logout()">
-        logout
-      </md-button>
-    </div>
-  </md-toolbar>
-  
-  <md-content layout="row" flex>
-    <md-sidenav class="md-sidenav-left md-whiteframe-z2"
-      md-component-id="left" md-is-locked-open="Main.isSideNavLockedOpen">
-      <md-toolbar class="md-accent">
-        <h1 class="md-toolbar-tools">Menu</h1>
-      </md-toolbar>
-      <md-content>
-        
-      </md-content>
-    </md-sidenav>
-    
-    <md-content>
-      <ui-view />
+<md-toolbar md-theme="{{ Main.theme.active }}">
+  <div class="md-toolbar-tools">
+    <md-button ng-click="Main.toggleSideNav()" hide-gt-sm>menu</md-button>
+    <span>Titan</span>
+    <span flex></span>
+    <md-button ng-click="Main.logout()">logout</md-button>
+  </div>
+</md-toolbar>
+<div layout="row" layout-fill md-theme="{{ Main.theme.active }}" flex>
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2"
+    md-component-id="left" md-is-locked-open="Main.$mdMedia('gt-sm')" layout="column">
+    <md-toolbar class="md-accent md-tall"></md-toolbar>
+    <md-content flex>
+      <md-list>
+        <md-item>
+          <md-item-content layout-column layout-align="center center" layout-fill>
+            <md-button class="md-primary" flex="100">Courses</md-button>
+          </md-item-content>
+        </md-item>
+        <md-item>
+          <md-item-content layout-column layout-align="center center" layout-fill>
+            <md-button class="md-primary" flex="100">Profile</md-button>
+          </md-item-content>
+        </md-item>
+        <md-item>
+          <md-item-content layout-column layout-align="center center" layout-fill>
+            <md-button class="md-primary" flex="100">Settings</md-button>
+          </md-item-content>
+        </md-item>
+      </md-list>
     </md-content>
-    
-  </md-content>
+  </md-sidenav>
+  
+  <md-content flex ui-view></md-content>
+  
 </div>

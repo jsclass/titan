@@ -2,7 +2,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '.',
+    basePath: './src',
 
 
     // frameworks to use
@@ -10,8 +10,8 @@ module.exports = function(config) {
     frameworks: ['mocha', 'jspm', 'chai'],
 
     jspm: {
-      loadFiles: ['specs/**/*.js'],
-      serveFiles: ['src/**/*.js']
+      loadFiles: ['app/**/*.**']
+      // serveFiles: ['**/!(*.spec)*.js']
     },
     // list of files / patterns to load in the browser
     files: [],
@@ -22,8 +22,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      "src/**/*.js": ["babel"],
-      "specs/**/*.js": ["babel"]
+      "app/**/*.js": ["babel"]
     },
 
     // babelPreprocessor: {

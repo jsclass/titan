@@ -3,12 +3,22 @@ import from 'ui-router';
 import {DashModule} from 'app/main/dash/dash';
 
 class Main {
-  constructor($mdSidenav, Gatekeeper){
+  constructor($mdSidenav, Gatekeeper, $mdMedia){
     
-    this.isSideNavLockedOpen = true;
+    this.toggleSideNav = () =>{
+      let leftMenu = $mdSidenav('left');
+      leftMenu.toggle();
+    };
+    
+    this.$mdMedia = $mdMedia;
     
     this.logout = () => {
       Gatekeeper.logout();
+    };
+    
+    this.theme = {
+      active: 'default',
+      all: ['default', 'razi', 'lua', 'freshly', 'citrus', 'frosty']
     };
   }
 
@@ -23,10 +33,12 @@ export var MainModule = angular.module('app.main', [
 ])
   .config(function($stateProvider) {
     $stateProvider.state('app.main', {
-      url: '/',
+      url: '',
       templateUrl: 'app/main/main.html',
       controller: 'MainController as Main',
-      auth: true
+      auth: true,
+      abstract: true
+      
     });
   })
   .controller('MainController', Main);
